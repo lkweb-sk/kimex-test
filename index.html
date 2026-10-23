@@ -16,6 +16,7 @@
         .blob{position:fixed;border-radius:50%;filter:blur(120px);z-index:0;opacity:0.6;animation:float 20s infinite alternate ease-in-out}
         .blob-blue{background-color:#2B2BAD;width:50vw;height:50vw;top:-10vw;right:-10vw}
         .blob-red{background-color:#BA2222;width:40vw;height:40vw;bottom:-3vw;left:-10vw;animation-delay:-5s}
+        @media(max-width:768px){.blob{filter:blur(90px);opacity:.35}.blob-blue{width:110vw;height:110vw;top:-10%;right:-35%}.blob-red{width:100vw;height:100vw;bottom:5%;left:-40%}}
         @keyframes float{0%{transform:translate(0,0) scale(1)}50%{transform:translate(-5%,5%) scale(1.1)}100%{transform:translate(5%,-5%) scale(0.9)}}
         .glass-panel{background:rgba(255,255,255,0.03);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,0.08);box-shadow:0 4px 30px rgba(0,0,0,0.1);border-radius:1.5rem}
         .tap-effect{transition:transform 0.15s cubic-bezier(0.4,0,0.2,1),background-color 0.2s;cursor:pointer}
