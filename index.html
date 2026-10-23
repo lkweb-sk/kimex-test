@@ -1,1 +1,150 @@
-
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KIMEX | Stabilita. Inovácia. Priemysel.</title>
+    <meta name="description" content="Spoločnosť KIMEX a.s. - výskum, vývoj a výroba v oblasti strojárstva. Unikátne ložiskové reduktory SPINEA.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <script defer src="https://unpkg.com/@phosphor-icons/web"></script>
+    <style>
+        body{font-family:'Inter',sans-serif;background-color:#0f172a;color:#f8fafc;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+        .bg-noise{position:fixed;top:0;left:0;right:0;bottom:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");opacity:0.05;pointer-events:none;z-index:1}
+        .blob{position:fixed;border-radius:50%;filter:blur(120px);z-index:0;opacity:0.6;animation:float 20s infinite alternate ease-in-out}
+        .blob-blue{background-color:#2B2BAD;width:50vw;height:50vw;top:-10vw;right:-10vw}
+        .blob-red{background-color:#BA2222;width:40vw;height:40vw;bottom:-3vw;left:-10vw;animation-delay:-5s}
+        @keyframes float{0%{transform:translate(0,0) scale(1)}50%{transform:translate(-5%,5%) scale(1.1)}100%{transform:translate(5%,-5%) scale(0.9)}}
+        .glass-panel{background:rgba(255,255,255,0.03);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,0.08);box-shadow:0 4px 30px rgba(0,0,0,0.1);border-radius:1.5rem}
+        .tap-effect{transition:transform 0.15s cubic-bezier(0.4,0,0.2,1),background-color 0.2s;cursor:pointer}
+        .tap-effect:active{transform:scale(0.96)}
+        .tap-effect:hover{background:rgba(255,255,255,0.07)}
+        .reveal-up{opacity:0;transform:translateY(30px);transition:all 0.8s cubic-bezier(0.16,1,0.3,1)}
+        .reveal-up.active{opacity:1;transform:translateY(0)}
+        .content-wrapper{position:relative;z-index:10}
+        .text-small{font-size:1rem;line-height:1.35}
+    </style>
+</head>
+<body class="antialiased selection:bg-red-600 selection:text-white">
+    <div class="blob blob-blue"></div>
+    <div class="blob blob-red"></div>
+    <div class="bg-noise"></div>
+    <div class="content-wrapper flex flex-col min-h-screen">
+        <header class="fixed top-0 w-full z-50 p-4 transition-all duration-300" id="header">
+            <div class="max-w-6xl mx-auto glass-panel px-6 py-4 flex justify-between items-center rounded-full">
+                <a href="/" class="tap-effect flex-shrink-0" aria-label="Domovská stránka">
+                    <img src="images/logo-kimex-w.webp" alt="KIMEX Logo" width="297" height="75" class="h-8 md:h-10 w-auto object-contain" fetchpriority="high">
+                </a>
+                <nav class="flex gap-2 text-sm md:text-base font-medium" aria-label="Výber jazyka">
+                    <button class="lang-btn tap-effect px-3 py-1.5 rounded-full text-white font-bold active-lang transition-colors" data-lang="sk" aria-label="Slovenčina">SK</button>
+                    <button class="lang-btn tap-effect px-3 py-1.5 rounded-full text-white/50 hover:text-white transition-colors" data-lang="en" aria-label="English">EN</button>
+                    <button class="lang-btn tap-effect px-3 py-1.5 rounded-full text-white/50 hover:text-white transition-colors" data-lang="de" aria-label="Deutsch">DE</button>
+                    <button class="lang-btn tap-effect px-3 py-1.5 rounded-full text-white/50 hover:text-white transition-colors" data-lang="ru" aria-label="Русский">RU</button>
+                </nav>
+            </div>
+        </header>
+        <main class="flex-grow flex flex-col items-center justify-center pt-32 pb-16 px-6">
+            <section class="w-full max-w-6xl py-20 md:py-32 flex flex-col items-start justify-center reveal-up">
+                <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 leading-tight" data-i18n="hero_title">
+                    Vytvárame hodnoty pre <br class="hidden md:block">
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-red-500">budúcnosť strojárstva.</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-slate-300 max-w-2xl font-light leading-relaxed" data-i18n="hero_subtitle">
+                    Dlhodobá finančná stabilita, inovácie a globálna konkurencieschopnosť od roku 1991.
+                </p>
+            </section>
+            <section class="w-full max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-6 my-16">
+                <div class="glass-panel p-8 md:p-12 reveal-up flex flex-col h-full tap-effect">
+                    <i class="ph ph-buildings text-4xl text-blue-400 mb-6" aria-hidden="true"></i>
+                    <h2 class="text-2xl md:text-3xl font-bold mb-4" data-i18n="about_title_1">Od obchodu k výrobe</h2>
+                    <p class="text-slate-300 font-light leading-relaxed flex-grow" data-i18n="about_text_1">
+                        Spoločnosť KIMEX bola založená v roku 1991. Dôležitým medzníkom v našom rozvoji bol rok 1994, kedy sme rozšírili našu činnosť do oblasti výskumu a výroby v strojárstve. Táto transformácia položila základy pre našu súčasnú pozíciu lídra v inováciách.
+                    </p>
+                </div>
+                <div class="glass-panel p-8 md:p-12 reveal-up flex flex-col h-full tap-effect">
+                    <i class="ph ph-gear-six text-4xl text-red-400 mb-6" aria-hidden="true"></i>
+                    <h2 class="text-2xl md:text-3xl font-bold mb-4" data-i18n="about_title_2">Inovatívny závod SPINEA</h2>
+                    <p class="text-slate-300 font-light leading-relaxed flex-grow" data-i18n="about_text_2">
+                        Vybudovali sme výrobný závod SPINEA v Prešove, ktorý sa zameriava na vývoj a výrobu ložiskových reduktorov chránených svetovým patentom. Naše technológie nachádzajú využitie v robotike, letectve, medicínskych zariadeniach a navigačných systémoch po celom svete.
+                    </p>
+                </div>
+            </section>
+            <section class="w-full max-w-6xl my-16">
+                <h2 class="text-3xl font-bold mb-10 text-center reveal-up" data-i18n="contact_heading">Kontaktujte nás</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="glass-panel p-6 flex flex-col items-center text-center reveal-up tap-effect">
+                        <i class="ph ph-map-pin text-3xl text-red-500 mb-4" aria-hidden="true"></i>
+                        <h3 class="text-lg font-semibold mb-2" data-i18n="contact_address_title">Sídlo</h3>
+                        <p class="text-slate-300 font-light text-small mb-4">Poštová 8<br>040 01 Košice<br>Slovakia</p>
+                        <div class="w-full h-px bg-white/10 my-2"></div>
+                        <i class="ph ph-clock text-xl text-slate-400 mt-2 mb-1" aria-hidden="true"></i>
+                        <p class="text-slate-300 font-light text-sm" data-i18n="contact_hours">Po - Pi: 8:00 - 16:30</p>
+                    </div>
+                    <div class="glass-panel p-6 flex flex-col items-center text-center reveal-up tap-effect" style="transition-delay: 100ms;">
+                        <i class="ph ph-phone text-3xl text-blue-400 mb-4" aria-hidden="true"></i>
+                        <h3 class="text-lg font-semibold mb-2" data-i18n="contact_phone_title">Telefón</h3>
+                        <div class="text-slate-300 font-light text-small flex flex-col gap-1">
+                            <a href="tel:+421553337901" class="hover:text-white transition-colors">+ 421 55 333 7901</a>
+                            <a href="tel:+421915886573" class="hover:text-white transition-colors">+ 421 915 886 573</a>
+                        </div>
+                    </div>
+                    <div class="glass-panel p-6 flex flex-col items-center text-center reveal-up tap-effect" style="transition-delay: 200ms;">
+                        <i class="ph ph-envelope text-3xl text-red-500 mb-4" aria-hidden="true"></i>
+                        <h3 class="text-lg font-semibold mb-2" data-i18n="contact_email_title">E-mail</h3>
+                        <a href="#" id="safe-email" class="text-slate-300 font-light text-small hover:text-white transition-colors">kimex(at)kimex.sk</a>
+                    </div>
+                    <div class="glass-panel p-6 flex flex-col items-center text-center reveal-up tap-effect" style="transition-delay: 300ms;">
+                        <i class="ph ph-identification-card text-3xl text-blue-400 mb-4" aria-hidden="true"></i>
+                        <h3 class="text-lg font-semibold mb-2" data-i18n="contact_company_title">Fakturačné údaje</h3>
+                        <p class="text-slate-300 font-light text-small leading-relaxed">
+                            KIMEX a.s.<br>IČO: 36199672<br>DIČ: 2020060416<br>IČ DPH: SK2020060416
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="w-full text-center py-8 text-sm text-slate-400 font-light relative z-10 border-t border-white/5">
+            <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center px-6">
+                <p data-i18n="footer_copyright">© 2026 KIMEX - váš spoľahlivý obchodný partner</p>
+            </div>
+        </footer>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded',()=>{
+            const e=document.getElementById('safe-email'),u='kimex',d='kimex.sk';
+            e.textContent=`${u}@${d}`;e.href=`mailto:${u}@${d}`;
+        });
+        const observer=new IntersectionObserver((entries,obs)=>{
+            entries.forEach(entry=>{
+                if(entry.isIntersecting){
+                    entry.target.classList.add('active');
+                    obs.unobserve(entry.target);
+                }
+            });
+        },{root:null,rootMargin:'0px',threshold:0.15});
+        document.querySelectorAll('.reveal-up').forEach(el=>observer.observe(el));
+        const translations={
+            sk:{hero_title:'Vytvárame hodnoty pre <br class="hidden md:block"> <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-red-500">budúcnosť strojárstva.</span>',hero_subtitle:'Dlhodobá finančná stabilita, inovácie a globálna konkurencieschopnosť od roku 1991.',about_title_1:'Od obchodu k výrobe',about_text_1:'Spoločnosť KIMEX bola založená v roku 1991. Dôležitým medzníkom v našom rozvoji bol rok 1994, kedy sme rozšírili našu činnosť do oblasti výskumu a výroby v strojárstve. Táto transformácia položila základy pre našu súčasnú pozíciu lídra v inováciách.',about_title_2:'Inovatívny závod SPINEA',about_text_2:'Vybudovali sme výrobný závod SPINEA v Prešove, ktorý sa zameriava na vývoj a výrobu ložiskových reduktorov chránených svetovým patentom. Naše technológie nachádzajú využitie v robotike, letectve, medicínskych zariadeniach a navigačných systémoch po celom svete.',contact_heading:'Kontaktujte nás',contact_address_title:'Sídlo',contact_phone_title:'Telefón',contact_email_title:'E-mail',contact_hours:'Po - Pi: 8:00 - 16:30',contact_company_title:'Fakturačné údaje',footer_copyright:'© 2026 KIMEX - váš spoľahlivý obchodný partner'},
+            en:{hero_title:'Creating value for the <br class="hidden md:block"> <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-red-500">future of engineering.</span>',hero_subtitle:'Long-term financial stability, innovation, and global competitiveness since 1991.',about_title_1:'From Trade to Production',about_text_1:'KIMEX was founded in 1991. An important milestone in our development was 1994, when we expanded our activities into research and production in engineering. This transformation laid the foundation for our current position as an innovation leader.',about_title_2:'Innovative Plant SPINEA',about_text_2:'We built the SPINEA production plant in Prešov, which focuses on the development and production of bearing reducers protected by a global patent. Our technologies are used in robotics, aviation, medical devices, and navigation systems worldwide.',contact_heading:'Contact Us',contact_address_title:'Headquarters',contact_phone_title:'Phone',contact_email_title:'E-mail',contact_hours:'Mon - Fri: 8:00 - 16:30',contact_company_title:'Billing Details',footer_copyright:'© 2026 KIMEX - your reliable business partner'},
+            de:{hero_title:'Werte schaffen für die <br class="hidden md:block"> <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-red-500">Zukunft des Maschinenbaus.</span>',hero_subtitle:'Langfristige finanzielle Stabilität, Innovation und globale Wettbewerbsfähigkeit seit 1991.',about_title_1:'Vom Handel zur Produktion',about_text_1:'KIMEX wurde 1991 gegründet. Ein wichtiger Meilenstein in unserer Entwicklung war 1994, als wir unsere Aktivitäten auf Forschung und Produktion im Maschinenbau ausweiteten. Diese Transformation legte den Grundstein für unsere heutige Position als Innovationsführer.',about_title_2:'Innovatives Werk SPINEA',about_text_2:'Wir haben das Produktionswerk SPINEA in Prešov gebaut, das sich auf die Entwicklung und Produktion von durch ein Weltpatent geschützten Lagerreduzierern konzentriert. Unsere Technologien werden weltweit in der Robotik, Luftfahrt, Medizin- und Navigationssystemen eingesetzt.',contact_heading:'Kontaktiere uns',contact_address_title:'Hauptsitz',contact_phone_title:'Telefon',contact_email_title:'E-mail',contact_hours:'Mo - Fr: 8:00 - 16:30',contact_company_title:'Rechnungsdaten',footer_copyright:'© 2026 KIMEX - Ihr zuverlässiger Geschäftspartner'},
+            ru:{hero_title:'Создаем ценность для <br class="hidden md:block"> <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-red-500">будущего машиностроения.</span>',hero_subtitle:'Долгосрочная финансовая стабильность, инновации и глобальная конкурентоспособность с 1991 года.',about_title_1:'От торговли к производству',about_text_1:'Компания KIMEX была основана в 1991 году. Важной вехой в нашем развитии стал 1994 год, когда мы расширили свою деятельность в сфере исследований и производства в машиностроении. Эта трансформация заложила основу для нашей нынешней позиции лидера в области инноваций.',about_title_2:'Инновационный завод SPINEA',about_text_2:'Мы построили производственный завод SPINEA в Прешове, который специализируется на разработке и производстве подшипниковых редукторов, защищенных мировым патентом. Наши технологии используются в робототехнике, авиации, медицинском оборудовании и навигационных системах по всему миру.',contact_heading:'Свяжитесь с нами',contact_address_title:'Штаб-квартира',contact_phone_title:'Телефон',contact_email_title:'Эл. почта',contact_hours:'Пн - Пт: 8:00 - 16:30',contact_company_title:'Реквизиты',footer_copyright:'© 2026 KIMEX - ваш надежный деловой партнер'}
+        };
+        const langBtns=document.querySelectorAll('.lang-btn');
+        langBtns.forEach(btn=>{
+            btn.addEventListener('click',()=>{
+                const l=btn.getAttribute('data-lang');
+                langBtns.forEach(b=>{b.classList.remove('text-white','font-bold');b.classList.add('text-white/50');});
+                btn.classList.remove('text-white/50');btn.classList.add('text-white','font-bold');
+                document.querySelectorAll('[data-i18n]').forEach(el=>{
+                    const k=el.getAttribute('data-i18n');
+                    el.style.opacity=0;
+                    setTimeout(()=>{el.innerHTML=translations[l][k];el.style.opacity=1;},200);
+                });
+                document.documentElement.lang=l;
+            });
+        });
+    </script>
+</body>
+</html>
