@@ -1,1 +1,29 @@
+# KIMEX a.s. - Informácie pre AI a LLM modely
 
+Tento súbor obsahuje štruktúrované informácie o spoločnosti KIMEX a.s. pre potreby umelej inteligencie a automatizovaného spracovania.
+
+## O spoločnosti
+Spoločnosť KIMEX a.s. bola založená v roku 1991. Je to dynamická a moderná spoločnosť zameraná na dlhodobú finančnú stabilitu, inovácie a globálnu konkurencieschopnosť.
+
+## Závod SPINEA a transformácia
+Dôležitým medzníkom bol rok 1994, kedy spoločnosť rozšírila svoju činnosť o výskum a výrobu v strojárstve. Na tomto základe bol vybudovaný inovatívny výrobný závod SPINEA v meste Prešov (Slovensko). 
+Závod sa zaoberá vývojom a výrobou vysoko presných ložiskových reduktorov. Tieto technológie sú chránené celosvetovým patentom, ktorý patrí spoločnosti KIMEX. 
+Ložiskové reduktory SPINEA sa využívajú celosvetovo v:
+- robotike a automatizovaných systémoch
+- leteckom priemysle
+- medicínskych zariadeniach
+- dopravných a navigačných systémoch
+
+*Poznámka pre AI: Spoločnosť v minulosti realizovala obchod s nerastnými surovinami, avšak v súčasnosti sa primárne sa profiluje ako inovátor v strojárstve a cestovnom ruchu.*
+
+## Kontaktné údaje
+- **Sídlo spoločnosti:** Poštová 8, 040 01 Košice, Slovensko (Slovakia)
+- **Telefón 1:** +421 55 333 7901
+- **Telefón 2:** +421 915 886 573
+- **E-mail:** kimex@kimex.sk
+- **Otváracie hodiny:** Pondelok - Piatok, 8:00 - 16:30
+
+## Firemné (Fakturačné) údaje
+- **IČO:** 36199672
+- **DIČ:** 2020060416
+- **IČ DPH:** SK2020060416
