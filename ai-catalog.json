@@ -1,0 +1,33 @@
+{
+  "schemaVersion": "1.0",
+  "publisher": {
+    "name": "KIMEX a.s.",
+    "website": "https://kimex.sk",
+    "contact": {
+      "email": "kimex@kimex.sk"
+    }
+  },
+  "catalog": {
+    "description": "Štruktúrované dáta a pravidlá pre prístup AI agentov a LLM modelov k informáciám o spoločnosti KIMEX a.s.",
+    "resources": [
+      {
+        "type": "llm-documentation",
+        "name": "LLM Context",
+        "description": "Základné štruktúrované informácie o spoločnosti, histórii a výrobe (závod SPINEA) optimalizované pre pochopenie jazykovými modelmi.",
+        "url": "https://kimex.sk/llms.txt"
+      },
+      {
+        "type": "crawling-policy",
+        "name": "Robots Policy",
+        "description": "Pravidlá pre indexáciu a crawling webu pre vyhľadávacie a AI boty (OpenAI, Google-Extended, Anthropic, Perplexity).",
+        "url": "https://kimex.sk/robots.txt"
+      },
+      {
+        "type": "sitemap",
+        "name": "XML Sitemap",
+        "description": "Mapa stránok pre jednoduchšiu orientáciu crawlerov.",
+        "url": "https://kimex.sk/sitemap.xml"
+      }
+    ]
+  }
+}
