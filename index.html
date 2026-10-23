@@ -5,28 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KIMEX | Stabilita. Inovácia. Priemysel.</title>
     <meta name="description" content="Spoločnosť KIMEX a.s. - výskum, vývoj a výroba v oblasti strojárstva. Unikátne ložiskové reduktory SPINEA.">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     <script defer src="https://unpkg.com/@phosphor-icons/web"></script>
-    <style>
-        body{font-family:'Inter',sans-serif;background-color:#0f172a;color:#f8fafc;overflow-x:hidden;-webkit-font-smoothing:antialiased}
-        .bg-noise{position:fixed;top:0;left:0;right:0;bottom:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");opacity:0.05;pointer-events:none;z-index:1}
-        .blob{position:fixed;border-radius:50%;filter:blur(120px);z-index:0;opacity:0.6;animation:float 20s infinite alternate ease-in-out}
-        .blob-blue{background-color:#2B2BAD;width:50vw;height:50vw;top:-10vw;right:-10vw}
-        .blob-red{background-color:#BA2222;width:40vw;height:40vw;bottom:-3vw;left:-10vw;animation-delay:-5s}
-        @media(max-width:768px){.blob{filter:blur(90px);opacity:.35}.blob-blue{width:110vw;height:110vw;top:-10%;right:-35%}.blob-red{width:100vw;height:100vw;bottom:5%;left:-40%}}
-        @keyframes float{0%{transform:translate(0,0) scale(1)}50%{transform:translate(-5%,5%) scale(1.1)}100%{transform:translate(5%,-5%) scale(0.9)}}
-        .glass-panel{background:rgba(255,255,255,0.03);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,0.08);box-shadow:0 4px 30px rgba(0,0,0,0.1);border-radius:1.5rem}
-        .tap-effect{transition:transform 0.15s cubic-bezier(0.4,0,0.2,1),background-color 0.2s;cursor:pointer}
-        .tap-effect:active{transform:scale(0.96)}
-        .tap-effect:hover{background:rgba(255,255,255,0.07)}
-        .reveal-up{opacity:0;transform:translateY(30px);transition:all 0.8s cubic-bezier(0.16,1,0.3,1)}
-        .reveal-up.active{opacity:1;transform:translateY(0)}
-        .content-wrapper{position:relative;z-index:10}
-        .text-small{font-size:1rem;line-height:1.35}
-    </style>
 </head>
 <body class="antialiased selection:bg-red-600 selection:text-white">
     <div class="blob blob-blue"></div>
